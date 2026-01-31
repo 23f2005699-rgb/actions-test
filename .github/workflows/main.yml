@@ -1,0 +1,30 @@
+name: Test GitHub Action
+
+on:
+  workflow_dispatch:   # allows manual trigger
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 23f2005699@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
+name: Test GitHub Action
+
+on:
+  workflow_dispatch:   # allows manual trigger
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 23f2005699@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
