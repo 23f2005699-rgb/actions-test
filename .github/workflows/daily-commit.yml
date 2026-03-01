@@ -5,6 +5,9 @@ on:
     - cron: '17 21 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write   # 🔥 REQUIRED FOR PUSHING
+
 jobs:
   daily-commit:
     runs-on: ubuntu-latest
@@ -23,4 +26,7 @@ jobs:
           echo "Last updated on $(date -u)" >> daily-log.txt
           git add daily-log.txt
           git commit -m "Automated daily update - $(date -u)" || echo "No changes to commit"
+
+      - name: Push changes
+        run: |
           git push
